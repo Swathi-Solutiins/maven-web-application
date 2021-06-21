@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://52.66.243.206:9980/ganesh/repository/hemanth1-release/</url>
+	      <url>http://13.127.219.82:9980/swash/repository/maven-web-application-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://52.66.243.206:9980/ganesh/repository/hemanth1-snapshot/</url>
+	      <url>http://13.127.219.82:9980/swash/repository/maven-web-application-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
