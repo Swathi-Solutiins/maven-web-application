@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.233.99.84:9980/swash/repository/maven-web-application-release/</url>
+	      <url>http://13.234.33.238:9980/swash/repository/maven-web-application-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.233.99.84:9980/swash/repository/maven-web-application-snapshot/</url>
+	      <url>http://13.234.33.238:9980/swash/repository/maven-web-application-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
