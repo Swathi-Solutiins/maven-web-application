@@ -1,7 +1,6 @@
 node {
 
 def mavenHome = tool name: "maven 3.8.1"
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
 
 stage('CheckoutCode'){
 git credentialsId: '5659dc96-2dfc-401e-898e-9df6d083093f', url: 'https://github.com/Swathi-Solutiins/maven-web-application.git'
@@ -22,15 +21,10 @@ sh "${mavenHome}/bin/mvn deploy"
 }
 
 stage('DeployAppIntoTomcatServer'){
-sshagent(['1a92da98-e95e-40dd-8468-db66b9fd0e00']) {
+sshagent(['ganesh_redhat_tomcat_cred']) {
 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.194.124:/home/ec2-user/apache-tomcat-9.0.46/webapps/"
  }
   
 }
-
-stage('SendEMailNotification'){
-emailext body: 'build is failed', subject: 'Build is failed', to: 'swathi862@gmail.com'
-}
-
 
 }
