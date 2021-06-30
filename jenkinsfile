@@ -1,4 +1,4 @@
-node ('maven') {
+node ('master') {
 
 def mavenHome = tool name: "maven 3.8.1"
 
@@ -8,6 +8,7 @@ git credentialsId: 'reddy_scripted_cred', url: 'https://github.com/Swathi-Soluti
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
+
 /*
 stage('ExecuteSonarQubeReport')
 {
@@ -21,8 +22,8 @@ sh "${mavenHome}/bin/mvn deploy"
 }
 
 stage('DeployAppIntoTomcatServer'){
-sshagent(['ganesh_redhat_tomcat_cred']) {
-sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.194.124:/home/ec2-user/apache-tomcat-9.0.46/webapps/"
+sshagent(['ec2 user(reddy_scripted_cred']) {
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.127.209.42:/home/ec2-user/apache-tomcat-9.0.46/webapps/"
  }
   
 }
