@@ -3,7 +3,7 @@ node ('maven') {
 def mavenHome = tool name: "maven 3.8.1"
 
 stage('CheckoutCode'){
-git credentialsId: '5659dc96-2dfc-401e-898e-9df6d083093f', url: 'https://github.com/Swathi-Solutiins/maven-web-application.git'
+git credentialsId: 'reddy_scripted_cred', url: 'https://github.com/Swathi-Solutiins/maven-web-application.git'
 }
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
