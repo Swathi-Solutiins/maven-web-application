@@ -102,13 +102,13 @@
 	    <repository>
 	      <id>maven</id>
 	      <name>release</name>
-	      <url>http://52.66.250.185:9980/swash/repository/maven-web-release/</url>
+	      <url>http://3.109.211.108:9980/swash/repository/Nexus_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>maven</id>
 	      <name>snapshot</name>
-	      <url>http://52.66.250.185:9980/swash/repository/maven-web-snapshot/</url>
+	      <url>http://3.109.211.108:9980/swash/repository/Nexus_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
